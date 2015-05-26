@@ -1,0 +1,11 @@
+bower_components/
+node_modules/
+npm-debug.log
+cmd.exe - ショートカット.lnk
+lib/
+dist/
+release/
+typings/
+out/
+vendor/
+download/
