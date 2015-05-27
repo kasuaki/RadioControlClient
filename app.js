@@ -15,25 +15,3 @@ socket.on('disconnected', function(obj) { console.log(obj.msg); });
 socket.on('button_down',  function(obj) { console.log(obj.msg); });
 socket.on('button_up',    function(obj) { console.log(obj.msg); });
 socket.on('axis',         function(obj) { console.log(obj.msg); });
-
-var conn = {};
-var peer = new Peer('radioControl', {host: 'localhost', port: 9000, path: '/peerjs'});
-peer.on('error', function(e){
-   console.log(e.message);
-});
-peer.on('open', function(id) {
-  console.log('My peer ID is: ' + id);
-
-  conn = peer.connect('browser');
-
-  conn.on('open', function() {
-    // Receive messages
-    conn.on('data', function(data) {
-      console.log('Received', data);
-    });
-
-    // Send messages
-    conn.send('Hello!');
-  });
-
-});
