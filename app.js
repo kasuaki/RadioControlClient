@@ -1,4 +1,5 @@
 var io = require('socket.io-client');
+//var rtc = require('webrtc.io-client');
 
 var url = 'http://10.0.0.12:3000';
 
@@ -15,3 +16,12 @@ socket.on('disconnected', function(obj) { console.log(obj.msg); });
 socket.on('button_down',  function(obj) { console.log(obj.msg); });
 socket.on('button_up',    function(obj) { console.log(obj.msg); });
 socket.on('axis',         function(obj) { console.log(obj.msg); });
+
+url = 'http://10.0.0.12:9000';
+
+//rtc.createStream({"video": true, "audio":true}, function(stream){
+//  // get local stream for manipulation
+//});
+//
+//rtc.connect('ws://yourserveraddress:8001', optionalRoom);
+////then a bunch of callbacks are available
