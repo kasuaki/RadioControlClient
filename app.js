@@ -23,7 +23,7 @@ socket.on('button_up',    function(obj) { console.log(obj.msg); });
 socket.on('axis',         function(obj) { 
 	console.log(obj.axis + ':' + obj.value); 
 	if (obj.axis === 'LEFT_STICK_X') {
-		var val = 55 + obj.value * 35;
+		var val = 53 + obj.value * 35;
 		val = Math.round(val);
 		console.log(obj.axis + ':' + val); 
   		rpio.pwmSetData(18, val);
